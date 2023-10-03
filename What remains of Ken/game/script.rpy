@@ -93,7 +93,8 @@ label talk_to_helen:
 label look_neighborhood:
     scene urban_day with slow_dissolve
     K "is so cool"
-    K "I should do back"
+    K "Im so very cool"
+    K "I should so back"
     $ button2 = True
     jump button_screens_1
 
