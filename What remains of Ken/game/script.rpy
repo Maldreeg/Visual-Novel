@@ -5,13 +5,14 @@ define K = Character("Ken",color = "#ff0000")
 #Helen
 define H = Character("Helen", color = "#FF8B8B")
 image helen = im.Scale("Helen.png", 700, 750)
-image helen_icon_idle = im.Scale("helen_sitting_idle.png", 500, 500)
-image helen_icon_hovered = im.Scale("helen_sitting_hovered.png", 500, 500)
+image helen_icon_idle = im.Scale("helen_sitting_idle.png", 300, 300)
+image helen_icon_hovered = im.Scale("helen_sitting_hovered.png", 300, 300)
 
 #backgrounds
 image morningtime = im.Scale("630 AM.jpg", 1920, 1080)
 image room_morning = im.Scale("room_morning_light_on.jpg", 1920, 1080)
 image urban_day = im.Scale("urban_day.jpg", 1920, 1080)
+image living_room = im.Scale("living_room.jpg", 1920, 1080)
 
 #transition
 define slow_dissolve = Dissolve(1.0)
@@ -25,18 +26,35 @@ default button2 = False
 screen screen_button1:
         modal True
         imagebutton:
-            xalign 3
-            yalign .8
+            focus_mask True
+            xalign .4
+            yalign .6
             idle "helen_icon_idle"
             hover "helen_icon_hovered"
-            focus_mask True
             action Jump("talk_to_helen")
+            
+            
 
         imagebutton:
-            xpos 610
-            ypos 199
-            idle "door_idle"
-            hover "door_hover"
+            xpos 1181
+            ypos 407
+            idle "kitchen_top_idle"
+            hover "kitchen_top_hover"
+            action Jump("look_neighborhood")
+
+        imagebutton:
+            xpos 516
+            ypos 160
+            idle "backdoor_idle"
+            hover "backdoor_hover"
+            action Jump("look_neighborhood")
+            
+
+        imagebutton:
+            xpos 338
+            ypos 117
+            idle "go_to_room_idle"
+            hover "go_to_room_hover"
             action Jump("look_neighborhood")
 
 label start:
@@ -56,7 +74,7 @@ label start:
     call button_screens_1
 
 label button_screens_1:
-        scene room_morning with slow_dissolve
+        scene living_room with slow_dissolve
         hide helen with slow_dissolve
 
         if button1 and button2:
