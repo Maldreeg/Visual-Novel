@@ -13,6 +13,7 @@ image morningtime = im.Scale("630 AM.jpg", 1920, 1080)
 image room_morning = im.Scale("room_morning_light_on.jpg", 1920, 1080)
 image urban_day = im.Scale("urban_day.jpg", 1920, 1080)
 image living_room = im.Scale("living_room.jpg", 1920, 1080)
+image bathroom = im.Scale("Bathroom.jpg", 1920, 1080)
 
 #transition
 define slow_dissolve = Dissolve(1.0)
@@ -55,7 +56,7 @@ screen screen_button1:
             ypos 117
             idle "go_to_room_idle"
             hover "go_to_room_hover"
-            action Jump("look_neighborhood")
+            action Jump("go_to_room_menu")
 
 label start:
 
@@ -116,6 +117,22 @@ label look_neighborhood:
     $ button2 = True
     jump button_screens_1
 
+label go_to_room_menu: 
+    menu:
+        "Go to Bedroom":
+         jump go_to_bedroom
+        "Go to Bathroom":
+         jump go_to_bathroom
+
+label go_to_bedroom:
+    scene room_morning with slow_dissolve
+    "damn im rich"
+    jump button_screens_1
+
+label go_to_bathroom:
+    scene bathroom with slow_dissolve
+    "damn im rich"
+    jump button_screens_1
 
 label story_continue:
         show helen with slow_dissolve
