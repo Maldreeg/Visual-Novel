@@ -1,23 +1,39 @@
-Wed Oct  4 13:15:34 2023
+Sun Oct  8 17:17:26 2023
 Windows-10-10.0.22621
 Ren'Py 8.1.3.23091805
  
 
-Bootstrap to the start of init.init. took 0.06s
+Bootstrap to the start of init.init. took 0.04s
 Early init. took 0.00s
-Loader init. took 0.05s
-Loading error handling. took 0.04s
-Loading script. took 0.23s
-Loading save slot metadata. took 0.05s
+Loader init. took 0.03s
+Loading error handling. took 0.03s
+Loading script. took 0.26s
+Loading save slot metadata. took 0.04s
 Loading persistent. took 0.00s
 
-File "game/script.rpy", line 121: choice menuitem expects a non-empty block.
-    "Go to Bedroom":
-                    ^
+File "game/script.rpy", line 31: expected statement.
+    trasform center:
+                   ^
+
+File "game/script.rpy", line 34: expected statement.
+    trasform left:
+                 ^
+
+File "game/script.rpy", line 37: expected statement.
+    trasform right:
+                  ^
+
+File "game/script.rpy", line 40: expected statement.
+    trasform slightleft:
+                       ^
+
+File "game/script.rpy", line 43: expected statement.
+    trasform slightright:
+                        ^
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Interface start. took 0.61s
+Interface start. took 0.39s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1366, 768)
@@ -30,39 +46,125 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 38.72s
+Bootstrap to the start of init.init. took 35.86s
 Early init. took 0.00s
-Loader init. took 0.04s
-Loading error handling. took 0.04s
-Loading script. took 0.17s
-Loading save slot metadata. took 0.04s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.11s
+Loading save slot metadata. took 0.03s
 Loading persistent. took 0.00s
-Running init code. took 0.07s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.04s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
-Dump and make backups. took 0.08s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
+
+File "game/script.rpy", line 31: expected statement.
+    trasform center:
+                   ^
+
+File "game/script.rpy", line 34: expected statement.
+    trasform left:xalign 0.0,yalign 1.0
+                 ^
+
+File "game/script.rpy", line 35: expected statement.
+    trasform right:
+                  ^
+
+File "game/script.rpy", line 38: expected statement.
+    trasform slightleft:
+                       ^
+
+File "game/script.rpy", line 41: expected statement.
+    trasform slightright:
+                        ^
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.42s
+Interface start. took 0.37s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 50.44s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.12s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+
+File "game/script.rpy", line 31: expected statement.
+    trasform center :
+                    ^
+
+File "game/script.rpy", line 34: expected statement.
+    trasform left :
+                  ^
+
+File "game/script.rpy", line 37: expected statement.
+    trasform right :
+                   ^
+
+File "game/script.rpy", line 40: expected statement.
+    trasform slightleft :
+                        ^
+
+File "game/script.rpy", line 43: expected statement.
+    trasform slightright :
+                         ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start. took 0.39s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 73.11s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.13s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.05s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.29s
 Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.12s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.03s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.06s
+Interface start. took 0.04s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1366, 768)
@@ -75,14 +177,41 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 162.09s
+Bootstrap to the start of init.init. took 167.10s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.14s
+Loading save slot metadata. took 0.04s
+Loading persistent. took 0.00s
+
+File "game/script.rpy", line 240: end of line expected.
+    show billy with slow_dissolve at center
+                                  ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start. took 0.43s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 195.91s
 Early init. took 0.00s
 Loader init. took 0.03s
 Loading error handling. took 0.03s
-Loading script. took 0.14s
-Loading save slot metadata. took 0.03s
+Loading script. took 0.17s
+Loading save slot metadata. took 0.04s
 Loading persistent. took 0.00s
-Running init code. took 0.04s
+Running init code. took 0.05s
 Loading analysis data. took 0.01s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.03s
@@ -91,18 +220,409 @@ Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\Wh
 Dump and make backups. took 0.07s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.29s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 240.11s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.10s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.04s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
 Initial gc. took 0.03s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.32s
+Creating interface object. took 0.28s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.01s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init. took 263.32s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.17s
+Loading save slot metadata. took 0.04s
+Loading persistent. took 0.00s
+Running init code. took 0.05s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
+Dump and make backups. took 0.07s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.30s
 Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.08s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.01s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init. took 560.62s
+Early init. took 0.00s
+Loader init. took 0.04s
+Loading error handling. took 0.02s
+Loading script. took 0.16s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+
+File "game/script.rpy", line 252: Menu does not contain any choices.
+    menu:
+         ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start. took 0.54s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 567.14s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.12s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+
+File "game/script.rpy", line 252: Menu does not contain any choices.
+    menu:
+         ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start. took 0.36s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 588.42s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.14s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+
+File "game/script.rpy", line 245: expected ':' not found.
+    menu
+        ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start. took 0.36s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 600.68s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.13s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+
+File "game/script.rpy", line 252: Menu does not contain any choices.
+    menu:
+         ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start. took 0.38s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 603.64s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.03s
+Loading script. took 0.12s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+
+File "game/script.rpy", line 252: Menu does not contain any choices.
+    menu:
+         ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start. took 0.36s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 626.41s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.13s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+
+File "game/script.rpy", line 252: menu statement expects a non-empty block.
+    menu:
+        ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start. took 0.36s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 627.61s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.15s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+
+File "game/script.rpy", line 252: menu statement expects a non-empty block.
+    menu:
+        ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start. took 0.43s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 633.85s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.13s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+
+File "game/script.rpy", line 252: Menu does not contain any choices.
+    menu:
+         ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start. took 0.38s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 636.64s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.12s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+
+File "game/script.rpy", line 252: Menu does not contain any choices.
+    menu:
+         ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start. took 0.38s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 665.41s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.15s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.05s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
+Dump and make backups. took 0.06s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.31s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
@@ -120,218 +640,38 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 960.14s
-Early init. took 0.00s
-Loader init. took 0.05s
-Loading error handling. took 0.02s
-Loading script. took 0.14s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-
-File "game/script.rpy", line 124: expected statement.
-    "Go to Bathroom":
-                    ^
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start. took 0.75s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 972.41s
+Bootstrap to the start of init.init. took 742.28s
 Early init. took 0.00s
 Loader init. took 0.03s
 Loading error handling. took 0.02s
-Loading script. took 0.14s
-Loading save slot metadata. took 0.04s
-Loading persistent. took 0.00s
-
-File "game/script.rpy", line 124: expected statement.
-    "Go to Bathroom":
-                    ^
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start. took 0.60s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 987.71s
-Early init. took 0.00s
-Loader init. took 0.05s
-Loading error handling. took 0.06s
-Loading script. took 0.25s
-Loading save slot metadata. took 0.04s
-Loading persistent. took 0.00s
-
-File "game/script.rpy", line 124: expected statement.
-    "Go to Bathroom":
-                    ^
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start. took 0.57s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 990.63s
-Early init. took 0.00s
-Loader init. took 0.04s
-Loading error handling. took 0.02s
-Loading script. took 0.13s
+Loading script. took 0.12s
 Loading save slot metadata. took 0.03s
 Loading persistent. took 0.00s
-
-File "game/script.rpy", line 124: expected statement.
-    "Go to Bathroom":
-                    ^
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start. took 0.41s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 991.47s
-Early init. took 0.00s
-Loader init. took 0.04s
-Loading error handling. took 0.03s
-Loading script. took 0.17s
-Loading save slot metadata. took 0.05s
-Loading persistent. took 0.00s
-
-File "game/script.rpy", line 124: expected statement.
-    "Go to Bathroom":
-                    ^
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start. took 0.78s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 1008.28s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.02s
-Loading script. took 0.16s
-Loading save slot metadata. took 0.04s
-Loading persistent. took 0.00s
-Running init code. took 0.06s
+Running init code. took 0.04s
 Loading analysis data. took 0.01s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.03s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
-Dump and make backups. took 0.08s
+Dump and make backups. took 0.06s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.02s
+Initial gc. took 0.03s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.37s
+Creating interface object. took 0.34s
 Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.03s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 1035.01s
-Early init. took 0.00s
-Loader init. took 0.04s
-Loading error handling. took 0.03s
-Loading script. took 0.14s
-Loading save slot metadata. took 0.04s
-Loading persistent. took 0.00s
-Running init code. took 0.04s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Dump and make backups. took 0.07s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.37s
-Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.05s
 Build styles took 0.00s
 Load screen analysis took 0.03s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.07s
+Prepare screens took 0.09s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.06s
+Interface start. took 0.07s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1366, 768)
