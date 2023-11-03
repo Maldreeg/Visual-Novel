@@ -16,6 +16,10 @@ image billy = im.Scale("Ugly_bastard.png", 700, 900)
 define F = Character("Felix", color = "#77DD77")
 image felix = im.Scale("kanzaki.png", 700, 900)
 
+#Sister
+define E = Character("Helena", color = "#3A4D39")
+image helena = im.Scale("barbie.png", 700, 900)
+
 #NPC's
 define booger_aids = Character("Intercom", color = "#ADD8E6")
 
@@ -841,14 +845,110 @@ label ew:
     hide helen with slow_dissolve
     menu:
         "And I always will.":
-            jump ew2
+            jump act7_start
 
-label ew2:
-    scene black with slow_dissolve
-    jump act7_start
 
 label act7_start:
-    "START NA NG 7 boiiiiii"
+    scene black with slow_dissolve
+    pause 5
+    "{b}Her sister's going to visit this afternoon…I wonder what I should cook for her."
+    "{b}Can't have me being a stingy host. Afterall, she is still family, or would have been."
+    scene living_room with slow_dissolve
+    K "Aight {i}*clasps his hands*{/i} Time to prepare."
+    #inner toths
+    K "{i}I really did do her wrong, Imagine hearing about the death of your only family 2 weeks later."
+    K "{i}I just hope she took it well, can't imagine what it's like hearing that out of the blue."
+    K "{i}It broke me just hearing her over the phone…I hope I'm ready for this. I may have let you go but…haven't even started grieving yet."
+    K "{i}....Give me strength, Helen."
+    "{b}You moved through your kitchen like a well oiled machine, carefully preparing a meal for yourself and your visitor."
+    "{b}The apartment is silent. You go about your tasks solemnly, and alone."
+    "{b}Your days are still heavy, and will be for longer still."
+    K "….French onion soup appetizer done, plus good old homemade fried chicken."
+    K "Knowing her, she'll probably ring the doorbell any minu-{i}*ding!*"
+    K "Heh, she is as punctual as ever."
+    "{b}Before opening the door, you give yourself a momentary pause, checking your appearance, straightening your posture, and giving yourself an internal pep talk."
+    "{b}Even now, you're finding yourself inadequate for her."
+    "{i}{b}*Door opens*"
+    show living_room with slow_dissolve:
+        blur 6
+    show helena with slow_dissolve
+    E "Hey, Ken, you doing okay?"
+    K "As much as I could be. Come on inside."
+    E "Why, thank you, I love what you have done with the place by the way. It feels modern but not too clean."
+    K "Well, thanks but don’t thank me, that was mostly…Helen’s work."
+    E "Really? Didn’t know Helen became better at that."
+    K "Yeah, it was a recent thing mind you, she took a lot of time to really sit down and watch videos of home designing online."
+    E "She really was building a life here, huh."
+    K "With me, we really were…I’m sorry that you never got to see her here. She was shining the brightest I’ve ever seen her be."
+    E "I’ve heard though, She and I, well…we don’t frequently chat, but we did. This was the best place for her, for the both of you. That was my impression."
+    E "I’ve…said some choice words to you, last time we met. And I really take it all back. You’ve never held her back, quite the opposite really. I guess all I said was just…plain jealousy."
+    E "I wasn’t there for her after our parents died. Sure, I provided for her financially, but…never emotionally. You were there, since her worst years and to her best."
+    E "So I really wasn’t sure what I was expecting. She got a new opportunity to build a new life in a beautiful city. Of course she would choose you to go with her."
+    E "So…I’m sorry for what I said back then."
+    K "Hey, I’m sorry too, You out of all people should know first if…something ever happened to Helen, It must have came out of the blue for you, huh."
+    E "You were in a state of deep distress. It's understandable really. What matters is that you came to your senses. And you didn’t bring harm to anyone, when you were in that state."
+    E "You were so calm when you called me, I didn’t even believe it at first, but when I did well…"
+    E "It hurt me a lot to hear it. It still hurts."
+    K "Same here. We don’t have many people in our lives, and for the both of us…Helen was the foremost person that we had."
+    K "There won’t be another one like her for us."
+    E "Of course, Helen is Helen. No one else is."
+    K "Agreed. But we have to ourselves the time that she would have had. And…I guess we should spend it in a way that will make her happy."
+    E "It won’t make her happy if we mope around forever in grief, I know. But…for a time, she deserves more than a moment of silence, she deserves the grief that we will go through."
+    E "But life will go on without her, that, in the end, is what we will all conclude."
+    K "{i}*sigh*{/i} That much, I know to be true."
+    K "…Well, lunch is ready, shall we?"
+    E "Oh! Why, how kind of you, thank you."
+    scene black with slow_dissolve
+    scene living_room with slow_dissolve:
+        blur 6
+    show helena with slow_dissolve
+    "{b}It was a wonderful meal, you outdid yourself with the cooking. Something that you are quite satisfied with."
+    E "That. was good."
+    K "Why thank you, it took a lot of work, but I’m glad it was worth it."
+    E "You give your one hundred percent, when you get serious, I liked that about you. Helen always talked about you when you first started dating, made it seem like you were the dreamiest guy ever."
+    K "Well, I’m sorry to disappoint you but I’m just a regular guy."
+    E "That’s what you said back then too, but no, you were good to her, and she was good to you. I hope you won’t forget that."
+    K " I will never, don’t worry."
+    K "Heh…remember the time back in college, I was just getting beaten up by the preparations for my qualifying exams, and, like an angel, she just visited my dorm everyday."
+    K "She treated me like I was her only responsibility you know? It took me a while to get used to it, and it took me longer to stop trying to get her to leave and focus on herself."
+    K "But she really did help, all I needed to worry about was study, and I found myself relying on her, more and more."
+    E "Did she ever tell you that she has an exam around that time herself?"
+    K "Only a few years after it happened, {i}*chuckles*{/i} Apparently she aced that exam. I aced mine too, but…I didn’t exactly have the handicap of taking care of another student."
+    K "I never felt that I repaid her for that, even to the end."
+    E "You did though. Believe me, you two really did complete each other."
+    E "I…came here to pay respects to Helen, of course. But I also came to check up on you as well. What you told me…of having this image of Helen for days…well…"
+    K "It didn’t bring confidence towards my mental stability huh."
+    E "It really didn’t. I was very concerned for you. I really was expecting much worse when I came to your apartment."
+    E "Concerns that, well… they’re gone now, you’re a functioning human being, grieving and definitely not in your best shape but…"
+    K "That’s something that I can work on. I made a promise to her, and to myself."
+    K "I’ll pick myself right back up, and give myself a chance to…make myself whole again."
+    E "Right. Because no matter how much of you is lost, whatever remains is still you. And it's you in its entirety. A lesser copy, and what is lost is forever gone, but-"
+    K "That’s only a chance to make it yourself anew. Different, but it is no lesser than what you were."
+    E "Correct again, we…probably heard that from the same person huh."
+    K "Hahaha. Yeah…Helen has a beautiful but roundabout way of looking at things."
+    E "She’s always been like that. I’m glad that you met her, you…came in at just the right time. I don’t know where she would have been without you."
+    E "And that’s what I’ll say to you, Ken. It’s no one's fault, what happened. All I know is, she wouldn’t have changed a thing between you two."
+    K "Thank you. I’m starting to come around and accept it too."
+    E "Yeah…I’ve got something for you as well, a small gift really. Something to cheer you up."
+    K "Oh, what’s that?"
+    E "Alcohol"
+    E "The classy kind, what you would expect of me, really."
+    K "Expensive wine, I would guess?"
+    E "Not that expensive, but yes."
+    K "Then let’s have a glass each, wait here…"
+    K "Okay, here’s yours."
+    E  "Let’s have a toast first."
+    K "Sure"
+    K "One"
+    K "Two"
+    K "Three"
+    E "To Helen!"
+    K "To Helen!"
+    scene black with slow_dissolve
+
+label credits_presentation:
+"END NA BOI"
+
 
 
 
