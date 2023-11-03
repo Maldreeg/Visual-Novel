@@ -42,6 +42,7 @@ image cafe_outside = im.Scale("cafe_outside.png", 1920, 1080)
 image street_night = im.Scale("street_night.png", 1920, 1080)
 image grocery_store_outside = im.Scale("grocery_store_outside.png", 1920, 1080)
 image grocery_store_inside = im.Scale("grocery_store_inside.png", 1920, 1080)
+image i_wish_this_was_manila_bay = im.Scale("i_wish_this_was_manila_bay.png", 1920, 1080)
 
 
 #transition
@@ -697,7 +698,7 @@ label act5_start:
     H "I’m not anything anymore, I’m dead."
     H "Nothing is a replacement for me, not even me."
     K "I’ll be the judge of that…"
-    H "KEN! *screen shake*" with hpunch
+    H "KEN!" with hpunch
     H "Don’t! Do think about what you’re doing FOR ONCE!"
     K "WHY! Why did it happen to me…why did it happen to you!" with vpunch
     K "Traffic accident…It’s just unfair, life was good with you. And it was looking even better for the future."
@@ -747,6 +748,111 @@ label act5_start:
     show helen with slow_dissolve
     H "Okay…Good point."
     K "I have somewhere in mind…Come on."
+    jump act6_start
+    
+label act6_start:
+    scene black with slow_dissolve
+    pause 5
+    H "This place you're taking us…Is it far?"
+    K "No. But I think you’ll like it."
+    H "Hehe, well…lead the way, lover"
+    pause 5
+    K "We’re walking together again…"
+    H "With me by your side, looking up at you."
+    K "I’ll miss this."
+    H "And for me, I’ll miss everything…but you most of all."
+    pause 5
+    K "I can’t call it sadness, but it’s not happiness either. I just feel like a great weight has been lifted off me, yet too much has been taken off, and now I feel weightless."
+    H "Hmmm…Just call it bittersweet, and go on your day."
+    K "Bittersweet huh? …Yeah, I guess that’s accurate."
+    scene i_wish_this_was_manila_bay with slow_dissolve
+    pause 5
+    show i_wish_this_was_manila_bay with slow_dissolve:
+        blur 6
+    show helen with slow_dissolve
+    H "Oh…It’s beautiful! And so cool too!"
+    K "Not as cool and beautiful as you though"
+    H "Oh, you shush. Hahaha"
+    K " I’m glad you liked it though. I really was planning to take you here, before…yeah…"
+    H "Well, I’m glad you took the chance to do it, regardless of the short time that we have left."
+    K "Short time…yeah…even I can see it. You’re getting…fainter?"
+    H "Yep, My appearance is finally fitting for what I am, a half-ghost, half-hallucination…or something between those. I’m still not sure."
+    H "I don’t really care though. I’m just glad I was able to even exist for you even for just a couple of weeks more."
+    H "Doing so prevented you from…following me. And I even saved you from the brink there."
+    H "You were this close to going all psycho lover on me, and trying to keep a relationship with me, your dead fiance."
+    K "Yeah…It was close. I’m not proud of what I could have become, It’s not what I considered possible for me…and that disturbs me so much."
+    H "Hey, at least you listened to me in the end, that’s what matters."
+    K "I was willing to chase after you, what I was not willing to do, is to hurt you and your soul."
+    K "I love you only so far as that love doesn’t hurt."
+    H "And I love you for that. Even with me as a ghost…you still can never betray me huh."
+    K "I’d never disrespect your memory, never."
+    H "Memory? I’m still right here you know."
+    K "Um…yeah. But as a ghost."
+    H "{i}*chuckles*{/i} I know I was testing you…I’m glad you took it too heart this quickly."
+    K "Yeah…It's really the only thing I can do."
+    H "Mhm."
+    "{b}The two of you let silence comfort the scene. It’s somberness is not lost on both of you." 
+    "{b}The soft sounds of the waves hitting the breakwater quickly overtook it however, yet not breaking its effect."
+    "{b}You stayed like that for minutes, each one of you letting the moment pass without any event, and the next, and the next…"
+    "{b}You however, felt her presence slowly, but noticeably, get fainter each time. This is your cue. Time to say-"
+    K "Goodbye, Helen."
+    H "Good…wait, not yet! I got something I wanna do first!"
+    K "What? Okay…"
+    H "Okay. I’m a ghost right?"
+    K "Or my hallucination, but yeah I guess so. Why?"
+    H "Ghosts. Can float."
+    K "Yeah, they do that."
+    H "Let me just…"
+    K "Woah, HEY HELEN!"
+    "{b}You watched as her image disappeared under the baywalk walls. You wondered why you screamed so loudly out of concern for a woman who is already a ghost."
+    "{b}Then…you see her! A few feet away, her feet on no surface but the air."
+    K "HAHAHAHA, you look like a water spirit!"
+    H "Oh dear mortal…what has deemed you worthy of my countenance…{i}*pfft."
+    H "Oh shut up, this is probably my only chance of doing this…"
+    K "Alright, I’ll stop, you go have your fun. While I- Urhg- watch you from here."
+    "{b}You climbed the top of the walls, putting you at eye level with the floating beauty…Her etherealness is already visible, the moonlight is passing through her."
+    H "…You’ll be fine, I think. At this moment, I know you would love nothing else but to have me back. And thank you for that."
+    K "And I’m glad you understand that. My efforts do pay off."
+    H "Except for this one…"
+    H "Seven years since…I let you in my walls. For a quarter of my life, you were my everything."
+    H "And I was yours. I’m sorry I died. I know, I know it's not my fault, but still…"
+    H "To ease my soul…I’m sorry."
+    K "And you are forgiven…"
+    H "Well…as I was saying. You’ll be fine. It’s you after all. You…get hot-headed, you’re pessimistic, you’re awkward as hell sometimes…but deep down, you are just the kindest person ever."
+    H "You’re kind to everyone…even to yourself, I hope you never forget that."
+    K "I’ll…be kind to myself, even without you, I’ll try to live again truly."
+    H "Good…"
+    K "But I’ll never forget you. You…made me who I am today. Half of what I am was once you. It may be filled by me again, or by another person, but the shape…the hollow mold, is of you."
+    K "You will always have a place in my heart."
+    H "I…Thank you…"
+    H "And you made me the happiest during my life. No one can compare to you"
+    H "So hold your head up high, because you made this girl’s life a good one. And I hope you have a better one, even with this setback."
+    H "Live for me, alright? That’s the last thing I can say, I have nothing more."
+    K "…I guess, I’ll see you whenever, in the next life."
+    K "Goodbye, Helen."
+    H "Goodbye, Ken. You are the love of my life. I loved you…"
+    H "I love you."
+    menu:
+        "I love you too.":
+            hide helen with slow_dissolve
+            jump ew
+
+label ew:
+    hide helen with slow_dissolve
+    menu:
+        "And I always will.":
+            jump ew2
+
+label ew2:
+    scene black with slow_dissolve
+    jump act7_start
+
+label act7_start:
+    "START NA NG 7 boiiiiii"
+
+
+
+
 
 
 
