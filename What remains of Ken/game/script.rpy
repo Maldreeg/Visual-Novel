@@ -24,6 +24,8 @@ image helena = im.Scale("barbie.png", 700, 900)
 define booger_aids = Character("Intercom", color = "#ADD8E6")
 
 #backgrounds
+
+#<intros>
 image intro1_1 = im.Scale("Scene 1 Intro/1.jpg", 1920, 1080)
 image intro1_2 = im.Scale("Scene 1 Intro/2.jpg", 1920, 1080)
 image intro1_3 = im.Scale("Scene 1 Intro/3.jpg", 1920, 1080)
@@ -31,6 +33,39 @@ image intro1_4 = im.Scale("Scene 1 Intro/4.jpg", 1920, 1080)
 image intro1_5 = im.Scale("Scene 1 Intro/5.jpg", 1920, 1080)
 image intro1_6 = im.Scale("Scene 1 Intro/6.jpg", 1920, 1080)
 image intro1_7 = im.Scale("Scene 1 Intro/7.jpg", 1920, 1080)
+
+image intro2_1 = im.Scale("Scene 2 Intro/1.png", 1920, 1080)
+image intro2_2 = im.Scale("Scene 2 Intro/2.png", 1920, 1080)
+image intro2_3 = im.Scale("Scene 2 Intro/3.png", 1920, 1080)
+image intro2_4 = im.Scale("Scene 2 Intro/4.png", 1920, 1080)
+image intro2_5 = im.Scale("Scene 2 Intro/5.png", 1920, 1080)
+image intro2_6 = im.Scale("Scene 2 Intro/6.png", 1920, 1080)
+image intro2_7 = im.Scale("Scene 2 Intro/7.png", 1920, 1080)
+
+image intro3_1 = im.Scale("Scene 3 Intro/1.png", 1920, 1080)
+image intro3_2 = im.Scale("Scene 3 Intro/2.png", 1920, 1080)
+image intro3_3 = im.Scale("Scene 3 Intro/3.png", 1920, 1080)
+image intro3_4 = im.Scale("Scene 3 Intro/4.png", 1920, 1080)
+image intro3_5 = im.Scale("Scene 3 Intro/5.png", 1920, 1080)
+image intro3_6 = im.Scale("Scene 3 Intro/6.png", 1920, 1080)
+
+image intro4_1 = im.Scale("Scene 4 Intro/1.png", 1920, 1080)
+image intro4_2 = im.Scale("Scene 4 Intro/2.png", 1920, 1080)
+image intro4_3 = im.Scale("Scene 4 Intro/3.png", 1920, 1080)
+image intro4_4 = im.Scale("Scene 4 Intro/4.png", 1920, 1080)
+image intro4_5 = im.Scale("Scene 4 Intro/5.png", 1920, 1080)
+image intro4_6 = im.Scale("Scene 4 Intro/6.png", 1920, 1080)
+
+image intro5_1 = im.Scale("Scene 5 Intro/1.png", 1920, 1080)
+image intro5_2 = im.Scale("Scene 5 Intro/2.png", 1920, 1080)
+image intro5_3 = im.Scale("Scene 5 Intro/3.png", 1920, 1080)
+image intro5_4 = im.Scale("Scene 5 Intro/4.png", 1920, 1080)
+image intro5_5 = im.Scale("Scene 5 Intro/5.png", 1920, 1080)
+image intro5_6 = im.Scale("Scene 5 Intro/6.png", 1920, 1080)
+image intro5_7 = im.Scale("Scene 5 Intro/7.png", 1920, 1080)
+
+#</intros>
+
 image room_morning = im.Scale("room_morning_light_on.jpg", 1920, 1080)
 image urban_day = im.Scale("urban_day.jpg", 1920, 1080)
 image living_room = im.Scale("living_room.jpg", 1920, 1080)
@@ -127,6 +162,8 @@ label start:
     scene intro1_6 with slow_dissolve
     pause 2
     scene intro1_7 with slow_dissolve
+    pause 3
+    scene black with slow_dissolve
     pause 3
 
 
@@ -262,11 +299,29 @@ label after_menu1:
     H "Whatever do you mean?"
     K "…I love you."
     H "I love you too."
-    scene add_transition_here with slow_dissolve
-    pause 5.0
+    scene black with slow_dissolve
+    pause 3
     jump act2_start
 
 label act2_start:
+
+    scene intro2_1 with slow_dissolve
+    pause 1
+    scene intro2_2 with slow_dissolve
+    pause 1
+    scene intro2_3 with slow_dissolve
+    pause 2
+    scene intro2_4 with slow_dissolve
+    pause 2
+    scene intro2_5 with slow_dissolve
+    pause 2
+    scene intro2_6 with slow_dissolve
+    pause 3
+    scene intro2_7 with slow_dissolve
+    pause 2
+    scene black with slow_dissolve
+    pause 3
+
     scene office_entrance with slow_dissolve
     K "{i}The trains were crowded, as usual.\nThe clerk gave me the wrong change, as usual.\nAnd I hate my job, as usual."
     K "{i}*Sighs* Alright enough complaining, on to your cubicle.\nI am the company’s most dispensable soldier, ready to fight their most mundane battles."
@@ -375,13 +430,26 @@ label dialogue_work_4:
     H "So, have you had lunch yet?"
     K "No, I haven’t but that sounds like a great idea."
     H "Hehe, that always made you feel better. C’mon take us to Julie’s, I’m feeling for some Italian."
+    pause 5
     jump act3_start
 
 label act3_start:
-    scene add_transition_here with slow_dissolve
-    "{b}Try as hard as you want, as soon as you slip once, you’ll never get back up again."
-    "{b}You are haggling with your mind, taking reality and unreality on the same plate."
-    "{b}No comfort is enough. You are only delaying it."
+    scene black with slow_dissolve
+    pause 3
+    scene intro3_1 with slow_dissolve
+    pause 1
+    scene intro3_2 with slow_dissolve
+    pause 1
+    scene intro3_3 with slow_dissolve
+    pause 5
+    scene intro3_4 with slow_dissolve
+    pause 5
+    scene intro3_5 with slow_dissolve
+    pause 3
+    scene intro3_6 with slow_dissolve
+    pause 3
+    scene black with slow_dissolve
+    pause 3
     
     scene cafe with slow_dissolve
     K "{i}Ahhh…Nothing like the classic coffee aroma to make myself feel better."
@@ -579,9 +647,23 @@ label dialogue_cafe_5:
     jump act4_start
 
 label act4_start:
-    scene act4introhere
-    "{b}Your steps are uniform upon the ground. Walking. Your legs carry you back to your office."
-    "{b}The sun was shining on your back, you wished it burned out already."
+    scene black with slow_dissolve
+    pause 3
+    scene intro4_1 with slow_dissolve
+    pause 1
+    scene intro4_2 with slow_dissolve
+    pause 1
+    scene intro4_3 with slow_dissolve
+    pause 3
+    scene intro4_4 with slow_dissolve
+    pause 3
+    scene intro4_5 with slow_dissolve
+    pause 3
+    scene intro4_6 with slow_dissolve
+    pause 5
+    scene black with slow_dissolve
+    pause 3
+
     scene office_entrance with slow_dissolve
     "{b}Beyond the glass door of the offices, you see a silhouette. Billy reclining on the metal benches. He is waiting for you."
     scene office_entrance with slow_dissolve:
@@ -622,10 +704,27 @@ label act4_start:
     jump act5_start
 
 label act5_start:
-    scene add_transition_here with slow_dissolve
+    scene black with slow_dissolve
+    pause 3
+    scene intro5_1 with slow_dissolve
+    pause 1
+    scene intro5_2 with slow_dissolve
+    pause 1
+    scene intro5_3 with slow_dissolve
+    pause 3
+    scene intro5_4 with slow_dissolve
+    pause 3
+    scene intro5_5 with slow_dissolve
+    pause 3
+    scene intro5_6 with slow_dissolve
+    pause 4
+    scene intro5_7 with slow_dissolve
     pause 5
+    scene black with slow_dissolve
+    pause 3
+
     scene street_night with slow_dissolve
-    K "{i}That day…The last time I saw her, she left the apartment early in the night. Just as we both got home from work."
+    K "{i}That day…The last time I saw her, she left the house early in the night. Just as we both got home from work."
     K "{i}Grocery shopping. Such a mundane task, I didn’t even look at her face when I said goodbye."
     K "{i}I was sure that I’ll see her again within the hour…"
     scene grocery_store_outside with slow_dissolve
