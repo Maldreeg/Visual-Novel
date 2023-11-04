@@ -78,6 +78,7 @@ default button2 = False
 default button3 = False
 default button4 = False
 default story_continue_played = False
+default surveyanswered = False
 
 screen screen_button1:
         modal True   
@@ -95,7 +96,6 @@ screen screen_button1:
             hover "backdoor_hover"
             action Jump("look_neighborhood")
             
-
         imagebutton:
             xpos 338
             ypos 117
@@ -111,8 +111,34 @@ screen screen_button1:
             hover "helen_icon_hovered"
             action Jump("talk_to_helen")
 
-label start:
+screen survey: 
+    modal True
+    imagebutton:
+            focus_mask True
+            xalign .4
+            yalign .6
+            idle "helen_icon_idle"
+            hover "helen_icon_hovered"
+            action Return(),addresponse("Trooper")
 
+init python:
+    Responses=[]
+
+    def addresponse(response):
+        Responses.append(response)
+    
+label button_screens_1:
+    scene living_room with slow_dissolve
+    hide helen with slow_dissolve
+
+    # If all the button is pressed
+    if button1 and button2 and button3 and button4 and not story_continue_played:
+        jump story_continue
+        
+    else: 
+        call screen screen_button1 with slow_dissolve
+
+label start:
     #Intro scene lmaooo
     scene intro1_1 with slow_dissolve
     pause 1
@@ -141,22 +167,7 @@ label start:
     show helen with slow_dissolve
     H "Good. Wouldn’t want you to be late after all. Now c’mon."
     K "{i}*chuckles* \n Never a boring morning with her, huh."
-    call button_screens_1
-
-label button_screens_1:
-    scene living_room with slow_dissolve
-    hide helen with slow_dissolve
-
-    # If all the button is pressed
-    if button1 and button2 and button3 and button4 and not story_continue_played:
-        jump story_continue
-        
-
-    else: 
-        call screen screen_button1 with slow_dissolve
-
-
-
+    jump button_screens_1
 
 label talk_to_helen:
     show living_room with slow_dissolve:
@@ -182,22 +193,22 @@ label talk_to_helen:
             K "Nah, I was just kidding."
             H "WHY YOU-"
     $ button1 = True
-    jump button_screens_1
 
 label look_neighborhood:
     scene urban_day with slow_dissolve
-    K "is so cool"
-    K "Im so very cool"
-    K "I should so back"
+    K "Its a cool day out."
+    K "Almost as cool as I a-"
+    H "Hey! close the door you're wasting the air conditioning."
+    K "I should do that"
     $ button2 = True
     jump button_screens_1
 
 label go_to_room_menu: 
     menu:
         "Go to Bedroom":
-         jump go_to_bedroom
+            jump go_to_bedroom
         "Go to Bathroom":
-         jump go_to_bathroom
+            jump go_to_bathroom
 
 label kitchen_top:
     scene coffee with slow_dissolve
@@ -212,7 +223,7 @@ label kitchen_top:
 
 label go_to_bedroom:
     scene room_morning with slow_dissolve
-    "Well...nothing to do here"
+    K "Well...nothing to do here"
     jump button_screens_1
 
 label go_to_bathroom:
@@ -253,20 +264,20 @@ label no_breakfast:
     H "French Toast."
     K "Nice, you always made them nicely."
     H " …erm, from the convenience store."
-    K "And that is fine as well, thanks for getting us some."
+    K "And that's fine as well, thanks for getting us some."
     
-
 label after_menu1:
     H "Okay, take care of yourself, I sure as hell won’t."
     K "You never did stop with that did you?"
     H "Whatever do you mean?"
     K "…I love you."
     H "I love you too."
-    scene add_transition_here with slow_dissolve
+    scene black with slow_dissolve
     pause 5.0
     jump act2_start
 
 label act2_start:
+    call screen survey
     scene office_entrance with slow_dissolve
     K "{i}The trains were crowded, as usual.\nThe clerk gave me the wrong change, as usual.\nAnd I hate my job, as usual."
     K "{i}*Sighs* Alright enough complaining, on to your cubicle.\nI am the company’s most dispensable soldier, ready to fight their most mundane battles."
@@ -940,27 +951,18 @@ label act7_start:
     E  "Let’s have a toast first."
     K "Sure"
     K "One"
+    pause 1.5
     K "Two"
+    pause 1.5
     K "Three"
     E "To Helen!"
     K "To Helen!"
     scene black with slow_dissolve
-
+    
 label credits_presentation:
 "END NA BOI"
 
-
-
-
-
-
-
-
-
-
-    
-
-
-
 label game_over:
     $ renpy.full_restart()
+
+return
