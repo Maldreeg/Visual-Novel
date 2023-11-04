@@ -64,6 +64,13 @@ image intro5_5 = im.Scale("Scene 5 Intro/5.png", 1920, 1080)
 image intro5_6 = im.Scale("Scene 5 Intro/6.png", 1920, 1080)
 image intro5_7 = im.Scale("Scene 5 Intro/7.png", 1920, 1080)
 
+image credits1 = im.Scale("credits/1.png", 1920, 1080)
+image credits2 = im.Scale("credits/2.png", 1920, 1080)
+image credits3 = im.Scale("credits/3.png", 1920, 1080)
+image credits4 = im.Scale("credits/4.png", 1920, 1080)
+image credits5 = im.Scale("credits/5.png", 1920, 1080)
+
+
 #</intros>
 
 image room_morning = im.Scale("room_morning_light_on.jpg", 1920, 1080)
@@ -1044,21 +1051,26 @@ label act7_start:
     E "To Helen!"
     K "To Helen!"
     scene black with slow_dissolve
+    pause 5
 
 label credits_presentation:
-"END NA BOI"
-
-
-
-
-
-
-
-
-
-
-    
-
+scene credits1 with slow_dissolve
+pause 2
+scene credits2 with slow_dissolve
+pause 5
+scene credits1 with slow_dissolve
+pause 2
+scene credits3 with slow_dissolve
+pause 5
+scene credits1 with slow_dissolve
+pause 2
+scene credits4 with slow_dissolve
+pause 5
+scene black with slow_dissolve
+pause 3
+scene credits5 with slow_dissolve
+pause 5
+scene black with slow_dissolve
 
 
 label game_over:

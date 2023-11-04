@@ -1,16 +1,16 @@
-Sat Nov  4 14:21:30 2023
+Sat Nov  4 19:28:50 2023
 Windows-10-10.0.22621
 Ren'Py 8.1.3.23091805
  
 
-Bootstrap to the start of init.init. took 0.03s
+Bootstrap to the start of init.init. took 0.04s
 Early init. took 0.00s
-Loader init. took 0.06s
-Loading error handling. took 0.05s
-Loading script. took 0.50s
-Loading save slot metadata. took 0.29s
+Loader init. took 0.07s
+Loading error handling. took 0.06s
+Loading script. took 0.54s
+Loading save slot metadata. took 0.28s
 Loading persistent. took 0.00s
-Running init code. took 0.11s
+Running init code. took 0.10s
 Loading analysis data. took 0.02s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.27s
@@ -23,19 +23,19 @@ Initial gc. took 0.02s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.30s
+Creating interface object. took 0.31s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.01s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.06s
+Prepare screens took 0.07s
 Save pyanalysis. took 0.01s
-Save bytecode. took 0.03s
+Save bytecode. took 0.04s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.08s
+Interface start. took 0.09s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1366, 768)
@@ -47,81 +47,12 @@ Version: b'4.6.0 NVIDIA 526.47'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 153, in script call
-    call button_screens_1
-  File "game/script.rpy", line 280, in script
-    scene intro2_1 with slow_dissolve
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1678, in execute
-    renpy.exports.with_statement(trans, paired=paired)
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 1758, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\core.py", line 2978, in do_with
-    return self.interact(trans_pause=True,
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\core.py", line 4175, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\core.py", line 2782, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\transition.py", line 378, in render
-    top = render(self.new_widget, width, height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\transform.py", line 909, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\image.py", line 513, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\image.py", line 316, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\im.py", line 676, in render
-    return cache.get(self, render=True)
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\im.py", line 330, in get
-    surf = image.load()
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\im.py", line 978, in load
-    child = cache.get(self.image)
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\im.py", line 330, in get
-    surf = image.load()
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\im.py", line 803, in load
-    raise e
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\display\im.py", line 757, in load
-    filelike = renpy.loader.load(self.filename, directory="images")
-  File "C:\Users\DiAko\Downloads\renpy-8.1.3-sdk\renpy\loader.py", line 833, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'Scene 2 Intro/1.jpg'.
-
-While loading <renpy.display.im.Scale object at 0x0000000005135490>:
-  File "game/script.rpy", line 153, in script call
-    call button_screens_1
-  File "game/script.rpy", line 280, in script
-    scene intro2_1 with slow_dissolve
-OSError: Couldn't find file 'Scene 2 Intro/1.jpg'.
 Resetting cache.
-Bootstrap to the start of init.init. took 55.95s
+Bootstrap to the start of init.init. took 38.19s
 Early init. took 0.00s
-Loader init. took 0.03s
+Loader init. took 0.04s
 Loading error handling. took 0.03s
-Loading script. took 0.27s
+Loading script. took 0.28s
 Loading save slot metadata. took 0.04s
 Loading persistent. took 0.00s
 Running init code. took 0.03s
@@ -133,11 +64,11 @@ Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\Wh
 Dump and make backups. took 0.06s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.03s
+Initial gc. took 0.04s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.31s
+Creating interface object. took 0.30s
 Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.00s
@@ -149,51 +80,6 @@ Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 111.23s
-Early init. took 0.00s
-Loader init. took 0.07s
-Loading error handling. took 0.03s
-Loading script. took 0.42s
-Loading save slot metadata. took 0.05s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.04s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
-Dump and make backups. took 0.05s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.31s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
 Interface start. took 0.05s
 
 Initializing gl2 renderer:
@@ -206,223 +92,23 @@ Version: b'4.6.0 NVIDIA 526.47'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
 Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 131.85s
-Early init. took 0.00s
-Loader init. took 0.06s
-Loading error handling. took 0.02s
-Loading script. took 0.37s
-Loading save slot metadata. took 0.05s
-Loading persistent. took 0.00s
-Running init code. took 0.04s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.05s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
-Dump and make backups. took 0.07s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.32s
 Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.02s
+Init translation took 0.00s
+Build styles took 0.01s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
 Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 149.12s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.02s
-Loading script. took 0.28s
-Loading save slot metadata. took 0.04s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.04s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
-Dump and make backups. took 0.06s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.30s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 236.31s
+Bootstrap to the start of init.init. took 110.00s
 Early init. took 0.00s
 Loader init. took 0.05s
 Loading error handling. took 0.03s
-Loading script. took 0.31s
+Loading script. took 0.37s
 Loading save slot metadata. took 0.04s
 Loading persistent. took 0.00s
 Running init code. took 0.03s
 Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.01s
-Reloading save slot metadata. took 0.06s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
-Dump and make backups. took 0.06s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.31s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 1308.21s
-Early init. took 0.00s
-Loader init. took 0.04s
-Loading error handling. took 0.05s
-Loading script. took 1.13s
-Loading save slot metadata. took 0.35s
-Loading persistent. took 0.00s
-
-File "game/script.rpy", line 412: end of line expected.
-    scene Scene 3 Intro/1.png with slow_dissolve
-                          ^
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start. took 0.53s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 1412.32s
-Early init. took 0.00s
-Loader init. took 0.04s
-Loading error handling. took 0.03s
-Loading script. took 0.39s
-Loading save slot metadata. took 0.07s
-Loading persistent. took 0.00s
-Running init code. took 0.11s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.22s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
-Dump and make backups. took 0.05s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.32s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.09s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 1458.31s
-Early init. took 0.00s
-Loader init. took 0.04s
-Loading error handling. took 0.03s
-Loading script. took 0.39s
-Loading save slot metadata. took 0.04s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.01s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.04s
 Index archives took 0.00s
@@ -434,52 +120,7 @@ Initial gc. took 0.04s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.30s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 1520.47s
-Early init. took 0.00s
-Loader init. took 0.04s
-Loading error handling. took 0.03s
-Loading script. took 0.38s
-Loading save slot metadata. took 0.05s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.04s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
-Dump and make backups. took 0.06s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.30s
+Creating interface object. took 0.39s
 Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.00s
@@ -487,11 +128,11 @@ Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
 Prepare screens took 0.08s
-Save pyanalysis. took 0.02s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.04s
+Interface start. took 0.05s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1366, 768)
@@ -504,11 +145,62 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 1558.99s
+Bootstrap to the start of init.init. took 120.01s
 Early init. took 0.00s
-Loader init. took 0.04s
-Loading error handling. took 0.03s
-Loading script. took 0.36s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.13s
+Loading save slot metadata. took 0.04s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.04s
+Index archives took 0.00s
+Dump and make backups. took 0.06s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.29s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 526.47'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.01s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init. took 160.04s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.42s
 Loading save slot metadata. took 0.05s
 Loading persistent. took 0.00s
 Running init code. took 0.04s
@@ -517,237 +209,14 @@ Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.05s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
-Dump and make backups. took 0.07s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.36s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 2588.26s
-Early init. took 0.00s
-Loader init. took 0.05s
-Loading error handling. took 0.02s
-Loading script. took 0.33s
-Loading save slot metadata. took 0.04s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.01s
-Reloading save slot metadata. took 0.04s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
-Dump and make backups. took 0.05s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.37s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 2606.08s
-Early init. took 0.00s
-Loader init. took 0.05s
-Loading error handling. took 0.03s
-Loading script. took 0.18s
-Loading save slot metadata. took 0.06s
-Loading persistent. took 0.00s
-Running init code. took 0.04s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.05s
-Index archives took 0.00s
-Dump and make backups. took 0.07s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.41s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.09s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 2611.28s
-Early init. took 0.00s
-Loader init. took 0.06s
-Loading error handling. took 0.03s
-Loading script. took 0.22s
-Loading save slot metadata. took 0.06s
-Loading persistent. took 0.00s
-Running init code. took 0.04s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.06s
-Index archives took 0.00s
 Dump and make backups. took 0.08s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.04s
+Initial gc. took 0.07s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.43s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.09s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 4571.94s
-Early init. took 0.00s
-Loader init. took 0.11s
-Loading error handling. took 0.05s
-Loading script. took 0.54s
-Loading save slot metadata. took 0.08s
-Loading persistent. took 0.00s
-Running init code. took 0.06s
-Loading analysis data. took 0.03s
-Analyze and compile ATL. took 0.01s
-Reloading save slot metadata. took 0.09s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.57s
-Cleaning stores took 0.00s
-Init translation took 0.12s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.04s
-Save screen analysis took 0.06s
-Prepare screens took 0.21s
-Save pyanalysis. took 0.05s
-Save bytecode. took 0.05s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.11s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce MX230/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 526.47'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 4615.50s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.02s
-Loading script. took 0.37s
-Loading save slot metadata. took 0.07s
-Loading persistent. took 0.00s
-Running init code. took 0.04s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.04s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\DiAko\\AppData\\Roaming/RenPy/backups\\What remains of Ken':
-Dump and make backups. took 0.06s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.31s
+Creating interface object. took 0.32s
 Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.00s
