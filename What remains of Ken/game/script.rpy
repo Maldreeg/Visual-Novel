@@ -24,6 +24,8 @@ image helena = im.Scale("barbie.png", 700, 900)
 define booger_aids = Character("Intercom", color = "#ADD8E6")
 
 #backgrounds
+
+#<intros>
 image intro1_1 = im.Scale("Scene 1 Intro/1.jpg", 1920, 1080)
 image intro1_2 = im.Scale("Scene 1 Intro/2.jpg", 1920, 1080)
 image intro1_3 = im.Scale("Scene 1 Intro/3.jpg", 1920, 1080)
@@ -31,6 +33,46 @@ image intro1_4 = im.Scale("Scene 1 Intro/4.jpg", 1920, 1080)
 image intro1_5 = im.Scale("Scene 1 Intro/5.jpg", 1920, 1080)
 image intro1_6 = im.Scale("Scene 1 Intro/6.jpg", 1920, 1080)
 image intro1_7 = im.Scale("Scene 1 Intro/7.jpg", 1920, 1080)
+
+image intro2_1 = im.Scale("Scene 2 Intro/1.png", 1920, 1080)
+image intro2_2 = im.Scale("Scene 2 Intro/2.png", 1920, 1080)
+image intro2_3 = im.Scale("Scene 2 Intro/3.png", 1920, 1080)
+image intro2_4 = im.Scale("Scene 2 Intro/4.png", 1920, 1080)
+image intro2_5 = im.Scale("Scene 2 Intro/5.png", 1920, 1080)
+image intro2_6 = im.Scale("Scene 2 Intro/6.png", 1920, 1080)
+image intro2_7 = im.Scale("Scene 2 Intro/7.png", 1920, 1080)
+
+image intro3_1 = im.Scale("Scene 3 Intro/1.png", 1920, 1080)
+image intro3_2 = im.Scale("Scene 3 Intro/2.png", 1920, 1080)
+image intro3_3 = im.Scale("Scene 3 Intro/3.png", 1920, 1080)
+image intro3_4 = im.Scale("Scene 3 Intro/4.png", 1920, 1080)
+image intro3_5 = im.Scale("Scene 3 Intro/5.png", 1920, 1080)
+image intro3_6 = im.Scale("Scene 3 Intro/6.png", 1920, 1080)
+
+image intro4_1 = im.Scale("Scene 4 Intro/1.png", 1920, 1080)
+image intro4_2 = im.Scale("Scene 4 Intro/2.png", 1920, 1080)
+image intro4_3 = im.Scale("Scene 4 Intro/3.png", 1920, 1080)
+image intro4_4 = im.Scale("Scene 4 Intro/4.png", 1920, 1080)
+image intro4_5 = im.Scale("Scene 4 Intro/5.png", 1920, 1080)
+image intro4_6 = im.Scale("Scene 4 Intro/6.png", 1920, 1080)
+
+image intro5_1 = im.Scale("Scene 5 Intro/1.png", 1920, 1080)
+image intro5_2 = im.Scale("Scene 5 Intro/2.png", 1920, 1080)
+image intro5_3 = im.Scale("Scene 5 Intro/3.png", 1920, 1080)
+image intro5_4 = im.Scale("Scene 5 Intro/4.png", 1920, 1080)
+image intro5_5 = im.Scale("Scene 5 Intro/5.png", 1920, 1080)
+image intro5_6 = im.Scale("Scene 5 Intro/6.png", 1920, 1080)
+image intro5_7 = im.Scale("Scene 5 Intro/7.png", 1920, 1080)
+
+image credits1 = im.Scale("credits/1.png", 1920, 1080)
+image credits2 = im.Scale("credits/2.png", 1920, 1080)
+image credits3 = im.Scale("credits/3.png", 1920, 1080)
+image credits4 = im.Scale("credits/4.png", 1920, 1080)
+image credits5 = im.Scale("credits/5.png", 1920, 1080)
+
+
+#</intros>
+
 image room_morning = im.Scale("room_morning_light_on.jpg", 1920, 1080)
 image urban_day = im.Scale("urban_day.jpg", 1920, 1080)
 image living_room = im.Scale("living_room.jpg", 1920, 1080)
@@ -78,7 +120,6 @@ default button2 = False
 default button3 = False
 default button4 = False
 default story_continue_played = False
-default surveyanswered = False
 
 screen screen_button1:
         modal True   
@@ -96,6 +137,7 @@ screen screen_button1:
             hover "backdoor_hover"
             action Jump("look_neighborhood")
             
+
         imagebutton:
             xpos 338
             ypos 117
@@ -111,34 +153,8 @@ screen screen_button1:
             hover "helen_icon_hovered"
             action Jump("talk_to_helen")
 
-screen survey: 
-    modal True
-    imagebutton:
-            focus_mask True
-            xalign .4
-            yalign .6
-            idle "helen_icon_idle"
-            hover "helen_icon_hovered"
-            action Return(),addresponse("Trooper")
-
-init python:
-    Responses=[]
-
-    def addresponse(response):
-        Responses.append(response)
-    
-label button_screens_1:
-    scene living_room with slow_dissolve
-    hide helen with slow_dissolve
-
-    # If all the button is pressed
-    if button1 and button2 and button3 and button4 and not story_continue_played:
-        jump story_continue
-        
-    else: 
-        call screen screen_button1 with slow_dissolve
-
 label start:
+
     #Intro scene lmaooo
     scene intro1_1 with slow_dissolve
     pause 1
@@ -154,6 +170,8 @@ label start:
     pause 2
     scene intro1_7 with slow_dissolve
     pause 3
+    scene black with slow_dissolve
+    pause 3
 
 
     scene room_morning with slow_dissolve
@@ -167,7 +185,22 @@ label start:
     show helen with slow_dissolve
     H "Good. Wouldn’t want you to be late after all. Now c’mon."
     K "{i}*chuckles* \n Never a boring morning with her, huh."
-    jump button_screens_1
+    call button_screens_1
+
+label button_screens_1:
+    scene living_room with slow_dissolve
+    hide helen with slow_dissolve
+
+    # If all the button is pressed
+    if button1 and button2 and button3 and button4 and not story_continue_played:
+        jump story_continue
+        
+
+    else: 
+        call screen screen_button1 with slow_dissolve
+
+
+
 
 label talk_to_helen:
     show living_room with slow_dissolve:
@@ -193,22 +226,22 @@ label talk_to_helen:
             K "Nah, I was just kidding."
             H "WHY YOU-"
     $ button1 = True
+    jump button_screens_1
 
 label look_neighborhood:
     scene urban_day with slow_dissolve
-    K "Its a cool day out."
-    K "Almost as cool as I a-"
-    H "Hey! close the door you're wasting the air conditioning."
-    K "I should do that"
+    K "is so cool"
+    K "Im so very cool"
+    K "I should so back"
     $ button2 = True
     jump button_screens_1
 
 label go_to_room_menu: 
     menu:
         "Go to Bedroom":
-            jump go_to_bedroom
+         jump go_to_bedroom
         "Go to Bathroom":
-            jump go_to_bathroom
+         jump go_to_bathroom
 
 label kitchen_top:
     scene coffee with slow_dissolve
@@ -223,7 +256,7 @@ label kitchen_top:
 
 label go_to_bedroom:
     scene room_morning with slow_dissolve
-    K "Well...nothing to do here"
+    "Well...nothing to do here"
     jump button_screens_1
 
 label go_to_bathroom:
@@ -264,8 +297,9 @@ label no_breakfast:
     H "French Toast."
     K "Nice, you always made them nicely."
     H " …erm, from the convenience store."
-    K "And that's fine as well, thanks for getting us some."
+    K "And that is fine as well, thanks for getting us some."
     
+
 label after_menu1:
     H "Okay, take care of yourself, I sure as hell won’t."
     K "You never did stop with that did you?"
@@ -273,11 +307,28 @@ label after_menu1:
     K "…I love you."
     H "I love you too."
     scene black with slow_dissolve
-    pause 5.0
+    pause 3
     jump act2_start
 
 label act2_start:
-    call screen survey
+
+    scene intro2_1 with slow_dissolve
+    pause 1
+    scene intro2_2 with slow_dissolve
+    pause 1
+    scene intro2_3 with slow_dissolve
+    pause 2
+    scene intro2_4 with slow_dissolve
+    pause 2
+    scene intro2_5 with slow_dissolve
+    pause 2
+    scene intro2_6 with slow_dissolve
+    pause 3
+    scene intro2_7 with slow_dissolve
+    pause 2
+    scene black with slow_dissolve
+    pause 3
+
     scene office_entrance with slow_dissolve
     K "{i}The trains were crowded, as usual.\nThe clerk gave me the wrong change, as usual.\nAnd I hate my job, as usual."
     K "{i}*Sighs* Alright enough complaining, on to your cubicle.\nI am the company’s most dispensable soldier, ready to fight their most mundane battles."
@@ -386,13 +437,26 @@ label dialogue_work_4:
     H "So, have you had lunch yet?"
     K "No, I haven’t but that sounds like a great idea."
     H "Hehe, that always made you feel better. C’mon take us to Julie’s, I’m feeling for some Italian."
+    pause 5
     jump act3_start
 
 label act3_start:
-    scene add_transition_here with slow_dissolve
-    "{b}Try as hard as you want, as soon as you slip once, you’ll never get back up again."
-    "{b}You are haggling with your mind, taking reality and unreality on the same plate."
-    "{b}No comfort is enough. You are only delaying it."
+    scene black with slow_dissolve
+    pause 3
+    scene intro3_1 with slow_dissolve
+    pause 1
+    scene intro3_2 with slow_dissolve
+    pause 1
+    scene intro3_3 with slow_dissolve
+    pause 5
+    scene intro3_4 with slow_dissolve
+    pause 5
+    scene intro3_5 with slow_dissolve
+    pause 3
+    scene intro3_6 with slow_dissolve
+    pause 3
+    scene black with slow_dissolve
+    pause 3
     
     scene cafe with slow_dissolve
     K "{i}Ahhh…Nothing like the classic coffee aroma to make myself feel better."
@@ -590,9 +654,23 @@ label dialogue_cafe_5:
     jump act4_start
 
 label act4_start:
-    scene act4introhere
-    "{b}Your steps are uniform upon the ground. Walking. Your legs carry you back to your office."
-    "{b}The sun was shining on your back, you wished it burned out already."
+    scene black with slow_dissolve
+    pause 3
+    scene intro4_1 with slow_dissolve
+    pause 1
+    scene intro4_2 with slow_dissolve
+    pause 1
+    scene intro4_3 with slow_dissolve
+    pause 3
+    scene intro4_4 with slow_dissolve
+    pause 3
+    scene intro4_5 with slow_dissolve
+    pause 3
+    scene intro4_6 with slow_dissolve
+    pause 5
+    scene black with slow_dissolve
+    pause 3
+
     scene office_entrance with slow_dissolve
     "{b}Beyond the glass door of the offices, you see a silhouette. Billy reclining on the metal benches. He is waiting for you."
     scene office_entrance with slow_dissolve:
@@ -633,10 +711,27 @@ label act4_start:
     jump act5_start
 
 label act5_start:
-    scene add_transition_here with slow_dissolve
+    scene black with slow_dissolve
+    pause 3
+    scene intro5_1 with slow_dissolve
+    pause 1
+    scene intro5_2 with slow_dissolve
+    pause 1
+    scene intro5_3 with slow_dissolve
+    pause 3
+    scene intro5_4 with slow_dissolve
+    pause 3
+    scene intro5_5 with slow_dissolve
+    pause 3
+    scene intro5_6 with slow_dissolve
+    pause 4
+    scene intro5_7 with slow_dissolve
     pause 5
+    scene black with slow_dissolve
+    pause 3
+
     scene street_night with slow_dissolve
-    K "{i}That day…The last time I saw her, she left the apartment early in the night. Just as we both got home from work."
+    K "{i}That day…The last time I saw her, she left the house early in the night. Just as we both got home from work."
     K "{i}Grocery shopping. Such a mundane task, I didn’t even look at her face when I said goodbye."
     K "{i}I was sure that I’ll see her again within the hour…"
     scene grocery_store_outside with slow_dissolve
@@ -951,18 +1046,32 @@ label act7_start:
     E  "Let’s have a toast first."
     K "Sure"
     K "One"
-    pause 1.5
     K "Two"
-    pause 1.5
     K "Three"
     E "To Helen!"
     K "To Helen!"
     scene black with slow_dissolve
-    
+    pause 5
+
 label credits_presentation:
-"END NA BOI"
+scene credits1 with slow_dissolve
+pause 2
+scene credits2 with slow_dissolve
+pause 5
+scene credits1 with slow_dissolve
+pause 2
+scene credits3 with slow_dissolve
+pause 5
+scene credits1 with slow_dissolve
+pause 2
+scene credits4 with slow_dissolve
+pause 5
+scene black with slow_dissolve
+pause 3
+scene credits5 with slow_dissolve
+pause 5
+scene black with slow_dissolve
+
 
 label game_over:
     $ renpy.full_restart()
-
-return
