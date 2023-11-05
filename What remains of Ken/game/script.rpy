@@ -3,8 +3,10 @@
 define K = Character("Ken",color = "#ff0000")
 
 #Helen
-define H = Character("Helen", color = "#FF8B8B")
-image helen = im.Scale("Helen.png", 700, 750)
+define H = Character("Helen", color = "#FF8B8B",image="helen")
+image helen neutral= im.Scale("Helen.png", 700, 750)
+image helen angry=im.Scale("Helen Angry.png",700,750)
+
 image helen_icon_idle = im.Scale("helen_sitting_idle.png", 300, 300)
 image helen_icon_hovered = im.Scale("helen_sitting_hovered.png", 300, 300)
 
@@ -153,8 +155,44 @@ screen screen_button1:
             hover "helen_icon_hovered"
             action Jump("talk_to_helen")
 
-label start:
+screen survey:
+    imagebutton:
+            focus_mask True
+            xpos 10
+            ypos 400
+            idle "helen_icon_idle"
+            hover "helen_icon_hovered"
+            action Return(),AddResponse("happy")
+    imagebutton:
+            focus_mask True
+            xpos 490
+            ypos 400
+            idle "helen_icon_idle"
+            hover "helen_icon_hovered"
+            action Return(),AddResponse("angry")
+    imagebutton:
+            focus_mask True
+            xpos 970
+            ypos 400
+            idle "helen_icon_idle"
+            hover "helen_icon_hovered"
+            action Return(),AddResponse("sad")
+    imagebutton:
+            focus_mask True
+            xpos 1450
+            ypos 400
+            idle "helen_icon_idle"
+            hover "helen_icon_hovered"
+            action Return(),AddResponse("touched")
 
+init python:
+    Responses=[]
+
+    def AddResponse(response):
+        Responses.append(response)
+
+label start:
+    stop music fadeout 1.0
     #Intro scene lmaooo
     scene intro1_1 with slow_dissolve
     pause 1
@@ -173,7 +211,7 @@ label start:
     scene black with slow_dissolve
     pause 3
 
-
+    play music "Scene1.mp3" fadein 0.5 loop
     scene room_morning with slow_dissolve
 
     "HEY! It's almost 8 my guy, Wake up. "
@@ -182,8 +220,8 @@ label start:
     K "yes...NO! I’m wide awake now."
     show room_morning with slow_dissolve:
         blur 6
-    show helen with slow_dissolve
-    H "Good. Wouldn’t want you to be late after all. Now c’mon."
+    show helen neutral
+    H neutral"Good. Wouldn’t want you to be late after all. Now c’mon."
     K "{i}*chuckles* \n Never a boring morning with her, huh."
     call button_screens_1
 
@@ -205,7 +243,7 @@ label button_screens_1:
 label talk_to_helen:
     show living_room with slow_dissolve:
         blur 6
-    show helen with slow_dissolve
+    show helen neutral with slow_dissolve
     H "What? Staring at me again I see."
 
     menu:
@@ -224,15 +262,16 @@ label talk_to_helen:
         "…You got something on your face":
             H "Oh! Dammit, again? Can you take it off? Please…"
             K "Nah, I was just kidding."
-            H "WHY YOU-"
+            H angry"WHY YOU-"
     $ button1 = True
     jump button_screens_1
 
 label look_neighborhood:
     scene urban_day with slow_dissolve
-    K "is so cool"
-    K "Im so very cool"
-    K "I should so back"
+    K "It's a cool day outside."
+    K "Almost as cool as I am-"
+    H "Hey! Close the door, it's getting too chilly in here."
+    K "I should do that."
     $ button2 = True
     jump button_screens_1
 
@@ -311,6 +350,9 @@ label after_menu1:
     jump act2_start
 
 label act2_start:
+    stop music fadeout 0.5
+    "What did you feel about scene one?"
+    call screen survey
 
     scene intro2_1 with slow_dissolve
     pause 1
@@ -329,6 +371,7 @@ label act2_start:
     scene black with slow_dissolve
     pause 3
 
+    play music "Scene2.mp3" fadein 0.5 loop
     scene office_entrance with slow_dissolve
     K "{i}The trains were crowded, as usual.\nThe clerk gave me the wrong change, as usual.\nAnd I hate my job, as usual."
     K "{i}*Sighs* Alright enough complaining, on to your cubicle.\nI am the company’s most dispensable soldier, ready to fight their most mundane battles."
@@ -441,6 +484,7 @@ label dialogue_work_4:
     jump act3_start
 
 label act3_start:
+    stop music fadeout 0.5
     scene black with slow_dissolve
     pause 3
     scene intro3_1 with slow_dissolve
@@ -458,6 +502,7 @@ label act3_start:
     scene black with slow_dissolve
     pause 3
     
+    play music "Scene3.mp3" fadein 0.5 loop
     scene cafe with slow_dissolve
     K "{i}Ahhh…Nothing like the classic coffee aroma to make myself feel better."
     show cafe with slow_dissolve:
@@ -641,6 +686,7 @@ label dialogue_cafe_5:
     F "Why did I ever forget…two weeks ago was it? I…"
     K "No…"
     F "I..."
+    stop music fadeout 0.5
     pause 2
     F "I’ve…Got nothing! I really shouldn’t be a detective, which is why I’m not."
     F "I’m sorry I couldn’t be more of a help. But hey, as long as she’s out there somewhere, I know that she’ll come around, you two are perfect for each other!"
@@ -654,6 +700,7 @@ label dialogue_cafe_5:
     jump act4_start
 
 label act4_start:
+    stop music fadeout 0.5
     scene black with slow_dissolve
     pause 3
     scene intro4_1 with slow_dissolve
@@ -671,6 +718,7 @@ label act4_start:
     scene black with slow_dissolve
     pause 3
 
+    play music "Scene2.mp3" fadein 0.5 loop
     scene office_entrance with slow_dissolve
     "{b}Beyond the glass door of the offices, you see a silhouette. Billy reclining on the metal benches. He is waiting for you."
     scene office_entrance with slow_dissolve:
@@ -711,6 +759,7 @@ label act4_start:
     jump act5_start
 
 label act5_start:
+    stop music fadeout 0.5
     scene black with slow_dissolve
     pause 3
     scene intro5_1 with slow_dissolve
@@ -730,6 +779,7 @@ label act5_start:
     scene black with slow_dissolve
     pause 3
 
+    play music "<from 4>Scene5.mp3" loop
     scene street_night with slow_dissolve
     K "{i}That day…The last time I saw her, she left the house early in the night. Just as we both got home from work."
     K "{i}Grocery shopping. Such a mundane task, I didn’t even look at her face when I said goodbye."
@@ -876,6 +926,7 @@ label act6_start:
     H "Hmmm…Just call it bittersweet, and go on your day."
     K "Bittersweet huh? …Yeah, I guess that’s accurate."
     scene i_wish_this_was_manila_bay with slow_dissolve
+    play music "<from 0 to 60>Scene6.mp3" fadeout 2
     pause 5
     show i_wish_this_was_manila_bay with slow_dissolve:
         blur 6
@@ -951,6 +1002,7 @@ label ew:
     hide helen with slow_dissolve
     menu:
         "And I always will.":
+            stop music fadeout 0.5
             jump act7_start
 
 
@@ -1036,6 +1088,7 @@ label act7_start:
     E "And that’s what I’ll say to you, Ken. It’s no one's fault, what happened. All I know is, she wouldn’t have changed a thing between you two."
     K "Thank you. I’m starting to come around and accept it too."
     E "Yeah…I’ve got something for you as well, a small gift really. Something to cheer you up."
+    play music "Let Down.mp3"
     K "Oh, what’s that?"
     E "Alcohol"
     E "The classy kind, what you would expect of me, really."
@@ -1052,25 +1105,26 @@ label act7_start:
     K "To Helen!"
     scene black with slow_dissolve
     pause 5
+    jump credits_presentation
 
 label credits_presentation:
-scene credits1 with slow_dissolve
-pause 2
-scene credits2 with slow_dissolve
-pause 5
-scene credits1 with slow_dissolve
-pause 2
-scene credits3 with slow_dissolve
-pause 5
-scene credits1 with slow_dissolve
-pause 2
-scene credits4 with slow_dissolve
-pause 5
-scene black with slow_dissolve
-pause 3
-scene credits5 with slow_dissolve
-pause 5
-scene black with slow_dissolve
+    scene credits1 with slow_dissolve
+    pause 2
+    scene credits2 with slow_dissolve
+    pause 5
+    scene credits1 with slow_dissolve
+    pause 2
+    scene credits3 with slow_dissolve
+    pause 5
+    scene credits1 with slow_dissolve
+    pause 2
+    scene credits4 with slow_dissolve
+    pause 5
+    scene black with slow_dissolve
+    pause 3
+    scene credits5 with slow_dissolve
+    pause 5
+    scene black with slow_dissolve
 
 
 label game_over:
