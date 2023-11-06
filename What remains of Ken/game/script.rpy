@@ -4,12 +4,12 @@ define K = Character("Ken",color = "#ff0000")
 
 #Helen
 define H = Character("Helen", color = "#FF8B8B",image="helen")
-image helen neutral=im.Scale("Helen.png", 700, 750)
-image helen blushing=im.Scale("Helen.png", 700, 750)
-image helen angry=im.Scale("Helen Angry.png",700,750)
-image helen sad=im.Scale("Helen.png", 700, 750)
-image helen smilingtears=im.Scale("Helen.png", 700, 750)
-image helen smiling=im.Scale("Helen.png", 700, 750)
+image helen neutral=im.Scale("Helen/helen neutral.png", 700, 900)
+image helen blushing=im.Scale("Helen/helen blush.png", 700, 900)
+image helen angry=im.Scale("Helen/helen angry.png",700,900)
+image helen sad=im.Scale("Helen/helen sad.png", 700, 900)
+image helen smilingtears=im.Scale("Helen/helen smile crying.png", 700, 900)
+image helen smiling=im.Scale("Helen/helen smile.png", 700, 900)
 
 image helen_icon_idle = im.Scale("helen_sitting_idle.png", 300, 300)
 image helen_icon_hovered = im.Scale("helen_sitting_hovered.png", 300, 300)
@@ -244,7 +244,7 @@ label start:
 
 label button_screens_1:
     scene living_room with slow_dissolve
-    hide helen with slow_dissolve
+    hide helen neutral with slow_dissolve
 
     # If all the button is pressed
     if button1 and button2 and button3 and button4 and not story_continue_played:
@@ -264,7 +264,7 @@ label talk_to_helen:
         "Hey, this is part of my morning routine too.":
             H smiling"Sure buddy, you wash your face, you brush your teeth, get your cup of coffee, and-"
             K " And I get to see your pretty profile, that is what makes my mornings complete."
-            H blushing"Oh, shut up. don’t start this early. (Use the blushing sprite)"
+            H blushing"Oh, shut up. don’t start this early."
         "I just can’t believe what I’m seeing.":
             H neutral"Yeah, might be too good for you. Are you sure I’m real?"
             K "Sure as day!"
@@ -327,7 +327,7 @@ label go_to_bathroom:
 label story_continue:
     show living_room with slow_dissolve:
         blur 6
-    show helen with slow_dissolve
+    show helen neutral with slow_dissolve
     H "How about some breakfast before you go?"
     menu:
         "Nah, I might just make it before I’m late if I hurry- I have to go.":
@@ -541,17 +541,17 @@ label act3_start:
             K "I will tell you, but I just can’t seem to do it now."
             H sad"Why not? Why can’t you face me?"
             H "Why can’t you..."
-            hide helen with slow_dissolve
+            hide helen sad with slow_dissolve
             jump dialogue_cafe_2
         "Maybe I’ll tell you later, once we get home…please?":
-            show helen at center
+            show helen neutral at center
             H sad"Always with the delays..."
             H "Can’t you be more punctual with your emotions this time?"
             K "I’m sorry...I just don’t think this is the best time or setting."
             H neutral" I- right. Sorry, I agree with that."
             H "But once it is appropriate…Don’t delay it any longer."
             H sad"Please…don’t delay it any longer."
-            hide helen with slow_dissolve
+            hide helen sad with slow_dissolve
             jump dialogue_cafe_2
 
 label dialogue_cafe_2:
@@ -836,7 +836,7 @@ label act5_start:
     show helen sad at left with slow_dissolve
     K "It wasn’t the last time I saw you, at least not alive."
     H "Ken…"
-    hide helen
+    hide helen sad
     scene dead_helen_lmao with flash
     K "Your face was…irreparable when they had me confirm the body. But it was you."
     K "It was you. And that was me, standing 3 feet away, as they pulled down the sheets over you."
@@ -850,7 +850,7 @@ label act5_start:
     K "I never had the chance to even think about it."
     K "You…I…whatever made me forget, it took over me quickly."
     H neutral"But it's gone now? You remembered the whole story?"
-    hide helen
+    hide helen neutral
     scene car_leaving with flash
     K "I remembered everything. You, saying goodbye. Me, oblivious to what’s gonna happen, watching TV. And then suddenly an hour or less later."
     K "The call. It was a police officer I think, he was stern and professional, he probably said similar things in similar situations."
@@ -925,14 +925,14 @@ label act5_start:
     H "How could I not? After all, it’s our last day together. I better stay consistent till the end."
     K "The last day, huh? ...Okay."
     K "Okay."
-    show helen with slow_dissolve:
+    show helen neutral with slow_dissolve:
         blur 3
     H neutral"My image is already getting fainter, that means you’re doing it, you’re letting yourself live again"
-    show helen with slow_dissolve:
+    show helen neutral with slow_dissolve:
         blur 5
     H smilingtears"…I guess this is it. I will alw-"
     K "Now hold on. I’m NOT saying goodbye to the love of my life in a grocery store."
-    hide helen
+    hide helen smilingtears
     show helen smiling with slow_dissolve
     H "Okay…Good point."
     K "I have somewhere in mind…Come on."
@@ -957,7 +957,7 @@ label act6_start:
     "Hmmm…Just call it bittersweet, and go on your day."
     "Bittersweet huh? …Yeah, I guess that’s accurate."
     scene i_wish_this_was_manila_bay with slow_dissolve
-    play music "<from 0 to 60>Scene6.mp3" fadeout 2
+    play music "<from 0 to 60.5>Scene6.mp3" fadeout 2 fadein 0.5
     pause 5
     show i_wish_this_was_manila_bay with slow_dissolve:
         blur 6
@@ -1026,11 +1026,11 @@ label act6_start:
     H "I love you."
     menu:
         "I love you too.":
-            hide helen with slow_dissolve
+            hide helen smiling with slow_dissolve
             jump ew
 
 label ew:
-    hide helen with slow_dissolve
+    hide helen smiling with slow_dissolve
     menu:
         "And I always will.":
             stop music fadeout 0.5
@@ -1121,8 +1121,8 @@ label act7_start:
     E neutral"She’s always been like that. I’m glad that you met her, you…came in at just the right time. I don’t know where she would have been without you."
     E "And that’s what I’ll say to you, Ken. It’s no one's fault, what happened. All I know is, she wouldn’t have changed a thing between you two."
     K "Thank you. I’m starting to come around and accept it too."
+    play music "Let Down.mp3" fadein 1.0
     E smile"Yeah…I’ve got something for you as well, a small gift really. Something to cheer you up."
-    play music "Let Down.mp3"
     K "Oh, what’s that?"
     E "Alcohol"
     E "The classy kind, what you would expect of me, really."
@@ -1165,16 +1165,26 @@ label credits_presentation:
         "Yes":
             jump wrapup
         "No":
-            return
+            jump wrapup
 
 label wrapup:
     "This is is a review of all your reactions throughout our game!"
+    show helen neutral
     H "In our first scene you felt [Response1], fair enough"
+    hide helen neutral
+    show billy neutral
     CW "In my first scene you felt [Response2], I hope that's your honest feelings."
+    hide billy neutral
+    show felix cheerful
     F "In my scene, [Response3] is your reaction! Did I get you good?"
+    hide felix cheerful
+    show billy happy
     CW "[Response4] is your response the second time I appeared. Good."
+    hide billy happy
+    show helen sad
     H "You found out that I was dead and [Response5] is what you felt..."
     H "And our goodbye lead you to feeling [Response6]."
+    hide helen sad
     "Thank you again for playing!"
     "And goodbye."
     jump game_over
