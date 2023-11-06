@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 158: expected a keyword argument or child statement.
-    "YO"
-    ^
+File "game/script.rpy", line 180: 'idle' is not a keyword argument or valid child of the button statement.
+    idle "happyemoji"
+        ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Sun Nov  5 13:41:55 2023
+Sun Nov  5 23:09:40 2023
